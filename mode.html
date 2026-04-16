@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Anniversaire - 18 ans</title>
+    
+    <style>
+        body {
+
+            /* Cette liste cible les polices système d'Apple en priorité */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+            /* Pour un look encore plus "Apple", on lisse les caractères */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+    
+            /* On augmente un peu l'espacement entre les lignes pour la lisibilité */
+            line-height: 1.6;
+    
+            /* On s'assure que le texte n'est pas collé aux bords */
+            padding: 40px;
+
+            /* On indique le nom de ton image ici */
+            background-image: url('fond_categories.jpg');
+            
+            /* Pour que l'image ne se répète pas */
+            background-repeat: no-repeat;
+            
+            /* Pour que l'image couvre tout l'écran, peu importe la taille */
+            background-size: cover;
+            
+            /* Pour que l'image reste fixe quand on scroll */
+            background-attachment: fixed;
+            
+            /* Pour centrer l'image */
+            background-position: center;
+
+            /* Petit bonus : on change la couleur du texte par défaut en blanc 
+               pour qu'il soit lisible sur une image sombre */
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+
+            h1 {
+            font-weight: 600; /* Un titre un peu épais mais pas trop */
+            letter-spacing: -0.02em; /* Les titres Apple sont souvent un peu resserrés */
+            font-size: 2.5rem;
+            }
+
+            p {
+             font-weight: 400; /* Texte normal léger */
+             color: #f5f5f7; /* Un blanc légèrement cassé, plus doux pour les yeux */
+            }
+
+             button {
+             font-family: inherit; /* Pour que le bouton utilise aussi la police Apple */
+             font-weight: 500;
+            }
+
+
+            /* Le conteneur qui contient l'image et les infos */
+.cadeau-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Fond légèrement blanc transparent */
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    max-width: 400px; /* Pour que la carte ne soit pas trop large */
+    transition: transform 0.2s; /* Petit effet au survol */
+}
+
+.cadeau-card:hover {
+    transform: scale(1.02); /* La carte grossit un peu quand on passe la souris */
+}
+
+.cadeau-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* La ligne qui contient le nom et le prix */
+.cadeau-infos {
+    display: flex;
+    justify-content: space-between; /* Pousse le nom à gauche et le prix à droite */
+    align-items: center;
+    margin-top: 10px;
+}
+
+.nom-cadeau {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.prix-cadeau {
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+        }
+
+       
+        
+    </style>
+</head>
+<body>
+     
+    
+    
+    
+    
+    <a href="categories.html">← Retour au categories</a>
+     <br>
+     <br>
+     <a href="index.html">← Retour à l'accueil</a>
+</body>
+</html>

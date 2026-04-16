@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Anniversaire - 18 ans</title>
+    
+    <style>
+        body {
+
+            /* Cette liste cible les polices système d'Apple en priorité */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+            /* Pour un look encore plus "Apple", on lisse les caractères */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+    
+            /* On augmente un peu l'espacement entre les lignes pour la lisibilité */
+            line-height: 1.6;
+    
+            /* On s'assure que le texte n'est pas collé aux bords */
+            padding: 40px;
+
+            /* On indique le nom de ton image ici */
+            background-image: url('fond.jpg');
+            
+            /* Pour que l'image ne se répète pas */
+            background-repeat: no-repeat;
+            
+            /* Pour que l'image couvre tout l'écran, peu importe la taille */
+            background-size: cover;
+            
+            /* Pour que l'image reste fixe quand on scroll */
+            background-attachment: fixed;
+            
+            /* Pour centrer l'image */
+            background-position: center;
+
+            /* Petit bonus : on change la couleur du texte par défaut en blanc 
+               pour qu'il soit lisible sur une image sombre */
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+
+            h1 {
+            font-weight: 600; /* Un titre un peu épais mais pas trop */
+            letter-spacing: -0.02em; /* Les titres Apple sont souvent un peu resserrés */
+            font-size: 2.5rem;
+            }
+
+            p {
+             font-weight: 400; /* Texte normal léger */
+             color: #f5f5f7; /* Un blanc légèrement cassé, plus doux pour les yeux */
+            }
+
+             button {
+             font-family: inherit; /* Pour que le bouton utilise aussi la police Apple */
+             font-weight: 500;
+            }
+
+        }
+
+        /* On ajoute un léger fond sombre sur le texte pour qu'il ressorte bien */
+        main, header {
+            background-color: rgba(0, 0, 0, 0.5); /* Noir à 50% de transparence */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+  <header>
+        <h1>Bienvenue pour mes 18 ans !</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Pourquoi ce site ?</h2>
+
+            <p>Salut a tous.</p>
+            
+            <p>J'ai créer ce site pour pouvoir vous faire une liste assez grande de tout les cadeaux qui me feront plaisir à recevoir pour mes 18 ans.
+                Je reflechies à ces cadeaux depuis quelque mois maintenant.
+            </p>
+
+            <p>
+                Je n'avais pas envie de vous faire une liste sur notes. Je trouve ca  ininterressant de voir un texte blanc sur fond noir, il manque un support photo pour vous montrer a quoi ca ressemble, et que ce soit plus jolie.
+            </p>
+
+            <p>Cet age est assez significatif, pour moi comme pour tout le monde. Il me permet d'etre assez libre dans les different domaine qui me sont restreind (tel que les sex shop, les casinos, les armureris, les contenues pour adultes, les salons de tatouages etc ...).
+
+            </p>
+
+            <section id="cadeaux">
+    <p>Si vous manquez d'inspiration, j'ai préparé quelques idées par thématiques :</p>
+    
+    <a href="categories.html" style="text-decoration: none;">
+        <button type="button" style="padding: 10px 20px; cursor: pointer; background-color: #ff4500; color: white; border: none; border-radius: 5px; font-weight: bold;">
+            Voir les catégories de cadeaux
+        </button>
+    </a>
+</section>
+
+            <section id="compte-a-rebours">
+    <h3>Grosse annonce dans:</h3>
+    <div id="timer" style="font-size: 24px; font-weight: bold; color: #ff4500;">
+        Chargement du compte à rebours...
+    </div>
+</section>
+ 
+<script>
+    // 1. On définit la date d'anniversaire (Année, Mois-1, Jour, Heure, Minute)
+    // Attention : les mois commencent à 0 (janvier = 0, avril = 3, etc.)
+    const dateAnniv = new Date(2026, 4, 6, 0, 0, 0).getTime(); 
+
+    // 2. On crée une fonction qui se répète toutes les secondes
+    const x = setInterval(function() {
+
+        // On récupère la date d'aujourd'hui
+        const maintenant = new Date().getTime();
+
+        // On calcule la distance entre les deux dates
+        const distance = dateAnniv - maintenant;
+
+        // Calculs mathématiques pour les jours, heures, minutes et secondes
+        const jours = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const heures = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const secondes = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // 3. On affiche le résultat dans l'élément avec l'id="timer"
+        document.getElementById("timer").innerHTML = jours + "j " + heures + "h "
+        + minutes + "m " + secondes + "s ";
+
+        // Si le compte à rebours est fini
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "Je suis bi-sexuel.";
+        }
+    }, 1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Anniversaire - 18 ans</title>
+    
+    <style>
+        body {
+
+            /* Cette liste cible les polices système d'Apple en priorité */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+            /* Pour un look encore plus "Apple", on lisse les caractères */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+    
+            /* On augmente un peu l'espacement entre les lignes pour la lisibilité */
+            line-height: 1.6;
+    
+            /* On s'assure que le texte n'est pas collé aux bords */
+            padding: 40px;
+
+            /* On indique le nom de ton image ici */
+            background-image: url('fond_categories.jpg');
+            
+            /* Pour que l'image ne se répète pas */
+            background-repeat: no-repeat;
+            
+            /* Pour que l'image couvre tout l'écran, peu importe la taille */
+            background-size: cover;
+            
+            /* Pour que l'image reste fixe quand on scroll */
+            background-attachment: fixed;
+            
+            /* Pour centrer l'image */
+            background-position: center;
+
+            /* Petit bonus : on change la couleur du texte par défaut en blanc 
+               pour qu'il soit lisible sur une image sombre */
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+
+            h1 {
+            font-weight: 600; /* Un titre un peu épais mais pas trop */
+            letter-spacing: -0.02em; /* Les titres Apple sont souvent un peu resserrés */
+            font-size: 2.5rem;
+            }
+
+            p {
+             font-weight: 400; /* Texte normal léger */
+             color: #f5f5f7; /* Un blanc légèrement cassé, plus doux pour les yeux */
+            }
+
+             button {
+             font-family: inherit; /* Pour que le bouton utilise aussi la police Apple */
+             font-weight: 500;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Theme</h1>
+    </header>
+
+    <main>
+        <div id="themes-container" style="display: flex; gap: 15px; flex-wrap: wrap;">
+    
+    <a href="hightech.html"><button style="padding: 15px; cursor: pointer;">High-Tech</button></a>
+    
+    <a href="montre.html"><button style="padding: 15px; cursor: pointer;">Montre</button></a>
+    
+    <a href="mode.html"><button style="padding: 15px; cursor: pointer;">Pouef</button></a>
+    
+    <a href="autre.html"><button style="padding: 15px; cursor: pointer;">Divers</button></a>
+
+</div>
+
+        <br>
+        <a href="index.html">← Retour à l'accueil</a>
+    </main>
+
+</body>
+</html>
