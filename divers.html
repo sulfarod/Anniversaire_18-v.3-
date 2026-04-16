@@ -21,8 +21,8 @@
             padding: 40px;
 
             /* On indique le nom de ton image ici */
-            background-image: url('fond_categories.jpg');  
-
+            background-image: url('fond_categories.jpg');
+            
             /* Pour que l'image ne se répète pas */
             background-repeat: no-repeat;
             
@@ -50,13 +50,53 @@
 
             p {
              font-weight: 400; /* Texte normal léger */
-             color: #f4f4f4; /* Un blanc légèrement cassé, plus doux pour les yeux */
+             color: #000000; /* Un blanc légèrement cassé, plus doux pour les yeux */
             }
 
              button {
              font-family: inherit; /* Pour que le bouton utilise aussi la police Apple */
              font-weight: 500;
             }
+
+            /* Le conteneur qui contient l'image et les infos */
+            .cadeau-card {
+             background-color: rgba(255, 255, 255, 0.1); /* Fond légèrement blanc transparent */
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            max-width: 400px; /* Pour que la carte ne soit pas trop large */
+            transition: transform 0.2s; /* Petit effet au survol */
+            }
+
+            .cadeau-card:hover {
+             transform: scale(1.02); /* La carte grossit un peu quand on passe la souris */
+            }
+
+            .cadeau-image {
+             width: 100%;
+             height: auto;
+            border-radius: 8px;
+            display: block;
+            }
+
+            /* La ligne qui contient le nom et le prix */
+            .cadeau-infos {
+            display: flex;
+            justify-content: space-between; /* Pousse le nom à gauche et le prix à droite */
+            align-items: center;
+            margin-top: 10px;
+            }
+
+            .nom-cadeau {
+            font-weight: 600;
+            font-size: 1.1rem;
+            }
+
+            .prix-cadeau {
+             font-weight: 800;
+             font-size: 1rem;
+            color: #000000; /* Un orange qui attire l'œil sur le prix */
+         }   
 
 
             /* Le conteneur qui contient l'image et les infos */
@@ -94,12 +134,13 @@
 }
 
 .prix-cadeau {
-    font-weight: 800;
-    font-size: 1rem;
-    color: #000000; /* Un orange qui attire l'œil sur le prix */
+    font-weight: 400;
+    opacity: 0.8;
 }
 
         }
+
+
 
         /* --- CONFIGURATION POUR MOBILE (Écrans de moins de 768px) --- */
 @media (max-width: 768px) {
@@ -130,11 +171,10 @@
     }
 }
 
-    
     </style>
 </head>
 <body>
-     <main>
+    <main>
           <a href="https://www.amazon.fr/SteelSeries-Aerox-Wireless-ultra-L%C3%A9g%C3%A8re-Autonomie/dp/B0966V1GPG/ref=sr_1_10?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2UNCAOZYJYVHL&dib=eyJ2IjoiMSJ9.wOoiJejG1WbSZ-FU7rHzVjC-UhYEUMIRUBFdI5tIz0EeWv7CQvB6w0nrsY5c1wECbLJLtl941ZReqeaESWQ8dOwbEh9lcQwuiIUmlE7slVieW8BTsfNC3jkTpKLUKWtdZvb5vydRWjznsdeURGX-Z3YhBEGxWvLJHJ7hJeGqAjN0BbG8bDlDTuUaR1-2xvfCEM2M0NQz_WJiNiDPzYdkPZQ5Fh19SZoyupLH7HGa_xQ4OljxH0Oyzb1CF88vfTdnLCynk2EfKSYOmqFLwnZrGsrB2g4woCgyNyt-8heEL1c.nc-isGEbJDwYaMKULlGehXA4ZhPsnWR0qR8HNBcvFTs&dib_tag=se&keywords=souris%2Bsteel%2Bseries&qid=1775163323&sprefix=souris%2Bsteel%2Bserie%2Caps%2C230&sr=8-10&ufe=app_do%3Aamzn1.fos.9ad51ef1-4f85-497e-abf8-79138a00c9e5&th=1" target="_blank" style="text-decoration: none; color: inherit;">
         <div class="cadeau-card">
             <img src="souris_steelseries_aerox3.jpg" alt="Souris Gaming" class="cadeau-image">
@@ -149,7 +189,7 @@
      </main>
     
     
-    
+
      <a href="categories.html">← Retour au categories</a>
      <br>
      <br>

@@ -65,7 +65,7 @@
     border-radius: 12px;
     padding: 15px;
     margin-bottom: 20px;
-    max-width: 400px; /* Pour que la carte ne soit pas trop large */
+    max-width: 500px; /* Pour que la carte ne soit pas trop large */
     max-height: 500px;
     transition: transform 0.2s; /* Petit effet au survol */
 }
@@ -95,13 +95,50 @@
 }
 
 .prix-cadeau {
-    font-weight: 400;
-    opacity: 0.8;
+    font-weight: 800;
+    font-size: 1rem;
+    color: #000000; /* Un orange qui attire l'œil sur le prix */
 }
 
         }
 
+        /* --- CONFIGURATION POUR MOBILE (Écrans de moins de 768px) --- */
+@media (max-width: 768px) {
+    body {
+        padding: 15px; /* On réduit les marges sur le côté pour gagner de la place */
+        font-size: 18px; /* On augmente la taille de base du texte */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* On réduit un peu la taille des gros titres pour qu'ils ne sortent pas de l'écran */
+    }
+
+    /* On force les cartes de cadeaux à prendre presque toute la largeur sur mobile */
+    .cadeau-card {
+        max-width: 100%; 
+        margin: 10px 0;
+    }
+
+    /* Si tu as des boutons côte à côte, on les met l'un sous l'autre pour qu'ils soient plus faciles à cliquer */
+    #themes-container {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%; /* Les boutons prennent toute la largeur pour être cliquables au pouce */
+        padding: 20px;
+        font-size: 1.1rem;
+    }
+}
+
     
+    main {
+    display: flex;
+    flex-wrap: wrap; /* Permet d'aller à la ligne s'il n'y a plus de place */
+    gap: 20px;       /* Espace entre les cartes */
+    justify-content: center;
+}
+
     </style>
 
 
@@ -119,6 +156,74 @@
             </div>
         </div>
     </a>
+
+
+    <a href="https://www.amazon.fr/dp/B0FHNZSS6F?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="ATTACK SHARK X8PLUS.jpg" alt="Souris Gaming" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">ATTACK SHARK X8PLUS</span>
+                <span class="prix-cadeau">~50€</span>
+            </div>
+        </div>
+    </a>
+
+    <a href="https://www.amazon.fr/Apple-MacBook-Pouces-Ordinateur-Portable/dp/B0DZDDRSNK?th=1" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="Macbook Air M4.jpg" alt="Souris Gaming" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">Macbook Air M4</span>
+                <span class="prix-cadeau">~1000€</span>
+            </div>
+        </div>
+    </a>
+
+    <a href="https://eleshop.fr/atten-st-8802.html" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="Station Brasage-Air_chaud.jpg" alt="Souris Gaming" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">Station Brasage-Air_chaud</span>
+                <span class="prix-cadeau">~150€</span>
+            </div>
+        </div>
+    </a>
+
+    <a href="https://eleshop.fr/multimetre-uni-t-ut139c.html" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="Multimètre.jpg" alt="Souris Gaming" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">Multimètre</span>
+                <span class="prix-cadeau">~50€</span>
+            </div>
+        </div>
+    </a>
+
+    <a href="https://www.amazon.fr/SSK-Externe-Portable-Transmission-appareils/dp/B0BJV16HC6/ref=sr_1_7?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2MPJUCAW8FKJR&dib=eyJ2IjoiMSJ9.tCYfDvYElzfzFeBLyqFpm5aBbuGKWUwp3ufXz6x0EufudHcw884UbwsqwBFS2HvOYmlWcWV3eFJRwkf6fAkH0a6JwEI3rL3WW1HeBXy3TkHybi3c1c23vK-EZYGSegpq4PGqO1WRAhR-ENB76ZjDV5batbiXMbkSbPQn3JZfKQaNGDHSS_yfsPVEkj8xL6M0bcVupSCWGhmj2etUXCLEtorOOMmG0-MdMmw_BZpjR_lGIcZs11A4kPf1-eCj4d0M95uNHk3IhcFJ-PZT-pc9CT9YtaWFbE3iHfSKB9DlP24.570gBY82HTf0DU_gnjHL_Aqm1xAqCejvx_oIfCmQyVI&dib_tag=se&keywords=disque%2Bdur%2Bexterne%2B256%2Bgo%2Bssd&qid=1776381773&sprefix=disque%2Bdur%2Bexterne%2B25%2Bgo%2Bssd%2Caps%2C226&sr=8-7&th=1" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="Disque externe SSD 256 Go.jpg" alt="Souris Gaming" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">Disque externe SSD 256 Go</span>
+                <span class="prix-cadeau">~60€</span>
+            </div>
+        </div>
+    </a>
+
+    <a href="https://www.amazon.fr/EleBikk-%C3%A9lectronique-Rechargeable-%C3%A9lectrique-Transporter/dp/B0FG3K5TCR/ref=sr_1_23?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=XXQ52R79X28Q&dib=eyJ2IjoiMSJ9.7TstHH18-AlRzH9I91TlkQoFPsDPrYEw8iqs04vBpw10e0yPNIB5u6iG5R7Q1KCRH1bL9mpNGCPRqmJmAr5ICpG4aVkiTG2fDpmkI_V2eO9BJnH2uFUFvWYCvUmZWoucUhIcogD8xKfmtHle8zEOoCEEkNoa6jLmHF-47sS4_IfhAMIhs3PZqopVeXY-ohK1dEQlH187VtRTKACsGJlBd3NEwxcbPsnicCXPIcTA8t1n24qLoh96X0MxudUi5Qga86V2BkV0IFhrodjVUypgcj3T_zbRlkotjC7wcaeBC7s.zyMlvlAMqU09AAJCakoc-6TBUf-2cjSPS2q5WpBTltE&dib_tag=se&keywords=briquet%2B%C3%A9lectrique&qid=1776382115&sprefix=briquet%2B%C3%A9lectriq%2Caps%2C243&sr=8-23&th=1" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="Briquet électrique.jpg" alt="Souris Gaming" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">Briquet électrique</span>
+                <span class="prix-cadeau">~10€</span>
+            </div>
+        </div>
+    </a>
+
     </main>
        
      <a href="categories.html">← Retour au categories</a>

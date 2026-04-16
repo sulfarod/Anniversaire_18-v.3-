@@ -60,6 +60,36 @@
 
         }
 
+
+        /* --- CONFIGURATION POUR MOBILE (Écrans de moins de 768px) --- */
+@media (max-width: 768px) {
+    body {
+        padding: 15px; /* On réduit les marges sur le côté pour gagner de la place */
+        font-size: 18px; /* On augmente la taille de base du texte */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* On réduit un peu la taille des gros titres pour qu'ils ne sortent pas de l'écran */
+    }
+
+    /* On force les cartes de cadeaux à prendre presque toute la largeur sur mobile */
+    .cadeau-card {
+        max-width: 100%; 
+        margin: 10px 0;
+    }
+
+    /* Si tu as des boutons côte à côte, on les met l'un sous l'autre pour qu'ils soient plus faciles à cliquer */
+    #themes-container {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%; /* Les boutons prennent toute la largeur pour être cliquables au pouce */
+        padding: 20px;
+        font-size: 1.1rem;
+    }
+}
+
     </style>
 </head>
 
@@ -76,9 +106,9 @@
     
     <a href="montre.html"><button style="padding: 15px; cursor: pointer;">Montre</button></a>
     
-    <a href="mode.html"><button style="padding: 15px; cursor: pointer;">Pouef</button></a>
+    <a href="pouef.html"><button style="padding: 15px; cursor: pointer;">Pouef</button></a>
     
-    <a href="autre.html"><button style="padding: 15px; cursor: pointer;">Divers</button></a>
+    <a href="divers.html"><button style="padding: 15px; cursor: pointer;">Divers</button></a>
 
 </div>
 
