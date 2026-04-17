@@ -21,8 +21,8 @@
             padding: 40px;
 
             /* On indique le nom de ton image ici */
-            background-image: url('fond_categories.jpg');  
-
+            background-image: url('Fond Montre.jpg');
+            
             /* Pour que l'image ne se répète pas */
             background-repeat: no-repeat;
             
@@ -50,7 +50,7 @@
 
             p {
              font-weight: 400; /* Texte normal léger */
-             color: #f4f4f4; /* Un blanc légèrement cassé, plus doux pour les yeux */
+             color: #c5c5c5; /* Un blanc légèrement cassé, plus doux pour les yeux */
             }
 
              button {
@@ -65,7 +65,8 @@
     border-radius: 12px;
     padding: 15px;
     margin-bottom: 20px;
-    max-width: 400px; /* Pour que la carte ne soit pas trop large */
+    max-width: 500px; /* Pour que la carte ne soit pas trop large */
+    max-height: 500px;
     transition: transform 0.2s; /* Petit effet au survol */
 }
 
@@ -75,9 +76,9 @@
 
 .cadeau-image {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
+    height: 400px;
+    object-fit: cover;
+    display: 8px;
 }
 
 /* La ligne qui contient le nom et le prix */
@@ -131,7 +132,17 @@
 }
 
     
+    main {
+    display: flex;
+    flex-wrap: wrap; /* Permet d'aller à la ligne s'il n'y a plus de place */
+    gap: 20px;       /* Espace entre les cartes */
+    justify-content: center;
+}
+
     </style>
+
+
+
 </head>
 <body>
      <main>

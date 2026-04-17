@@ -21,7 +21,7 @@
             padding: 40px;
 
             /* On indique le nom de ton image ici */
-            background-image: url('fond_categories.jpg');
+            background-image: url('Fond Pouef.jpg');
             
             /* Pour que l'image ne se répète pas */
             background-repeat: no-repeat;
@@ -50,7 +50,7 @@
 
             p {
              font-weight: 400; /* Texte normal léger */
-             color: #f5f5f7; /* Un blanc légèrement cassé, plus doux pour les yeux */
+             color: #c5c5c5; /* Un blanc légèrement cassé, plus doux pour les yeux */
             }
 
              button {
@@ -65,7 +65,8 @@
     border-radius: 12px;
     padding: 15px;
     margin-bottom: 20px;
-    max-width: 400px; /* Pour que la carte ne soit pas trop large */
+    max-width: 500px; /* Pour que la carte ne soit pas trop large */
+    max-height: 500px;
     transition: transform 0.2s; /* Petit effet au survol */
 }
 
@@ -75,9 +76,9 @@
 
 .cadeau-image {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
+    height: 400px;
+    object-fit: cover;
+    display: 8px;
 }
 
 /* La ligne qui contient le nom et le prix */
@@ -101,7 +102,6 @@
 
         }
 
-        
         /* --- CONFIGURATION POUR MOBILE (Écrans de moins de 768px) --- */
 @media (max-width: 768px) {
     body {
@@ -131,21 +131,40 @@
     }
 }
 
-       
-        
+    
+    main {
+    display: flex;
+    flex-wrap: wrap; /* Permet d'aller à la ligne s'il n'y a plus de place */
+    gap: 20px;       /* Espace entre les cartes */
+    justify-content: center;
+}
+
     </style>
+
+
+
 </head>
 <body>
     <main>
-          <a href="https://www.amazon.fr/SteelSeries-Aerox-Wireless-ultra-L%C3%A9g%C3%A8re-Autonomie/dp/B0966V1GPG/ref=sr_1_10?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2UNCAOZYJYVHL&dib=eyJ2IjoiMSJ9.wOoiJejG1WbSZ-FU7rHzVjC-UhYEUMIRUBFdI5tIz0EeWv7CQvB6w0nrsY5c1wECbLJLtl941ZReqeaESWQ8dOwbEh9lcQwuiIUmlE7slVieW8BTsfNC3jkTpKLUKWtdZvb5vydRWjznsdeURGX-Z3YhBEGxWvLJHJ7hJeGqAjN0BbG8bDlDTuUaR1-2xvfCEM2M0NQz_WJiNiDPzYdkPZQ5Fh19SZoyupLH7HGa_xQ4OljxH0Oyzb1CF88vfTdnLCynk2EfKSYOmqFLwnZrGsrB2g4woCgyNyt-8heEL1c.nc-isGEbJDwYaMKULlGehXA4ZhPsnWR0qR8HNBcvFTs&dib_tag=se&keywords=souris%2Bsteel%2Bseries&qid=1775163323&sprefix=souris%2Bsteel%2Bserie%2Caps%2C230&sr=8-10&ufe=app_do%3Aamzn1.fos.9ad51ef1-4f85-497e-abf8-79138a00c9e5&th=1" target="_blank" style="text-decoration: none; color: inherit;">
+         <a href="	" target="_blank" style="text-decoration: none; color: inherit;">
         <div class="cadeau-card">
-            <img src="souris_steelseries_aerox3.jpg" alt="Souris Gaming" class="cadeau-image">
+            <img src="Clio 4.jpg" class="cadeau-image">
             
             <div class="cadeau-infos">
-                <span class="nom-cadeau">Souris SteelSeries Aerox 3</span>
-                <span class="prix-cadeau">50€ -- 70€</span>
+                <span class="nom-cadeau">Clio 4 de mamie</span>
             </div>
         </div>
+    </a>
+
+    <a href="https://www.amazon.fr/EQM-SOLUCIONES-ECO-301-Isopropylique-%C3%A9lectroniques/dp/B07SH9FY7G/ref=sr_1_6?dib=eyJ2IjoiMSJ9.K4H4pBHXra2F2WxT_WpX59-LfVp27GNpmpfczxs5Q1WoQhy5Nx2RZOT4_h1SJpxHkfXrhHZlegDQ5XHQomFw_cikH-d6BFHY82_SEgcLpDsZse_460pDplIhZ_ulKNTmkDSSfx8NPhZeolhwqke2VcKLyr8DXFsFpuCg-GRzxYFMyDIyxOi8WvUHzwKVWqHl1cbPOEtE_eeptyiPR-UMbzcELN_4l2hWbKSZUI6NFpMEPa3j-GoklGOzAOqzBq4Ji1sFBtvKYQmNk3vflEM8IOQpa4yZVng7mqtDnaLVgMk.wDDo2fP8HvvL2zQZpxgfzfVBOTHAAitQsny04tGQZ7I&dib_tag=se&keywords=alcool%2Bisopropylique&qid=1776416588&sr=8-6&th=1" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="Alcool Isopropylique.jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">Alcool Isopropylique</span>
+                <span class="prix-cadeau">~10€</span>
+            </div>
+	</div>
     </a>
 
      </main>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Anniversaire - 18 ans</title>
+    
+    <style>
+        body {
+
+            /* Cette liste cible les polices système d'Apple en priorité */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+            /* Pour un look encore plus "Apple", on lisse les caractères */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+    
+            /* On augmente un peu l'espacement entre les lignes pour la lisibilité */
+            line-height: 1.6;
+    
+            /* On s'assure que le texte n'est pas collé aux bords */
+            padding: 40px;
+
+            /* On indique le nom de ton image ici */
+            background-image: url('Fond Lego.jpg');
+            
+            /* Pour que l'image ne se répète pas */
+            background-repeat: no-repeat;
+            
+            /* Pour que l'image couvre tout l'écran, peu importe la taille */
+            background-size: cover;
+            
+            /* Pour que l'image reste fixe quand on scroll */
+            background-attachment: fixed;
+            
+            /* Pour centrer l'image */
+            background-position: center;
+
+            /* Petit bonus : on change la couleur du texte par défaut en blanc 
+               pour qu'il soit lisible sur une image sombre */
+            color: rgb(0, 0, 0);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+
+            h1 {
+            font-weight: 600; /* Un titre un peu épais mais pas trop */
+            letter-spacing: -0.02em; /* Les titres Apple sont souvent un peu resserrés */
+            font-size: 2.5rem;
+            }
+
+            p {
+             font-weight: 400; /* Texte normal léger */
+             color: #c5c5c5; /* Un blanc légèrement cassé, plus doux pour les yeux */
+            }
+
+             button {
+             font-family: inherit; /* Pour que le bouton utilise aussi la police Apple */
+             font-weight: 500;
+            }
+
+
+            /* Le conteneur qui contient l'image et les infos */
+.cadeau-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Fond légèrement blanc transparent */
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    max-width: 500px; /* Pour que la carte ne soit pas trop large */
+    max-height: 500px;
+    transition: transform 0.2s; /* Petit effet au survol */
+}
+
+.cadeau-card:hover {
+    transform: scale(1.02); /* La carte grossit un peu quand on passe la souris */
+}
+
+.cadeau-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: 8px;
+}
+
+/* La ligne qui contient le nom et le prix */
+.cadeau-infos {
+    display: flex;
+    justify-content: space-between; /* Pousse le nom à gauche et le prix à droite */
+    align-items: center;
+    margin-top: 10px;
+}
+
+.nom-cadeau {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.prix-cadeau {
+    font-weight: 800;
+    font-size: 1rem;
+    color: #000000; /* Un orange qui attire l'œil sur le prix */
+}
+
+        }
+
+        /* --- CONFIGURATION POUR MOBILE (Écrans de moins de 768px) --- */
+@media (max-width: 768px) {
+    body {
+        padding: 15px; /* On réduit les marges sur le côté pour gagner de la place */
+        font-size: 18px; /* On augmente la taille de base du texte */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* On réduit un peu la taille des gros titres pour qu'ils ne sortent pas de l'écran */
+    }
+
+    /* On force les cartes de cadeaux à prendre presque toute la largeur sur mobile */
+    .cadeau-card {
+        max-width: 100%; 
+        margin: 10px 0;
+    }
+
+    /* Si tu as des boutons côte à côte, on les met l'un sous l'autre pour qu'ils soient plus faciles à cliquer */
+    #themes-container {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%; /* Les boutons prennent toute la largeur pour être cliquables au pouce */
+        padding: 20px;
+        font-size: 1.1rem;
+    }
+}
+
+    
+    main {
+    display: flex;
+    flex-wrap: wrap; /* Permet d'aller à la ligne s'il n'y a plus de place */
+    gap: 20px;       /* Espace entre les cartes */
+    justify-content: center;
+}
+
+    </style>
+
+
+
+</head>
+<body>
+     <main>
+        <a href="https://www.amazon.fr/LEGO-10337-Lamborghini-Countach-quattrovalvole/dp/B0D8VGT3MV/ref=sr_1_3?crid=16ODYZSJZGKX5&dib=eyJ2IjoiMSJ9.zaxJ2LD6OlFVAiEB01koG9ZaeJ8t3c3qbzwwuyuTkkxM4AjnlUSBODJrd_uuvtzQvupoB54jUKIKlcHJ4Jhc912yBqODU3v0dkr_HGgbCOdE8E5ykeyOhudAqjutWUQsboeLVSg6jl2boLfwvkdudRTViWXIGKN9PThOMLFx7QMrSHmA3dZFeflpGTxBXMh80hRUT7uUc3-Asy8eqQnPyuG-18G4oaDcXPaZBP7ZqICgbK5U1ic-Lieb1Py01r8nBcnQp-VKf1p32CYyVyuvkXGqAQYMAG5BRKX6V6YOfns.uxg9UHSjmuQdckWtJ1gM-dfyxt2Sz-5ZzOy0ssADigU&dib_tag=se&keywords=lego+lamborghini&qid=1776418487&sprefix=lego+lam%2Caps%2C236&sr=8-3&ufe=app_do%3Aamzn1.fos.49fccda8-a887-4188-817b-b9a64bb30e43" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="Lamborghini Countach.jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">Lamborghini Countach</span>
+                <span class="prix-cadeau">~160€</span>
+            </div>
+	    </div>
+    </a>
+
+        <a href="https://www.amazon.fr/LEGO-Speed-Champions-76908-construction/dp/B09JKY1FPX/ref=sr_1_22?crid=16ODYZSJZGKX5&dib=eyJ2IjoiMSJ9.zaxJ2LD6OlFVAiEB01koG9ZaeJ8t3c3qbzwwuyuTkkxM4AjnlUSBODJrd_uuvtzQvupoB54jUKIKlcHJ4Jhc912yBqODU3v0dkr_HGgbCOdE8E5ykeyOhudAqjutWUQsboeLVSg6jl2boLfwvkdudRTViWXIGKN9PThOMLFx7QMrSHmA3dZFeflpGTxBXMh80hRUT7uUc3-Asy8eqQnPyuG-18G4oaDcXPaZBP7ZqICgbK5U1ic-Lieb1Py01r8nBcnQp-VKf1p32CYyVyuvkXGqAQYMAG5BRKX6V6YOfns.uxg9UHSjmuQdckWtJ1gM-dfyxt2Sz-5ZzOy0ssADigU&dib_tag=se&keywords=lego+lamborghini&qid=1776418487&sprefix=lego+lam%2Caps%2C236&sr=8-22" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="Lamborghini Countach (petite).jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">Lamborghini Countach</span>
+                <span class="prix-cadeau">~45€</span>
+            </div>
+        </div>
+    </a>
+
+    <a href="https://www.amazon.fr/LEGO-Technic-Voiture-Skyline-Furious/dp/B0DRCXL888/ref=sr_1_25?crid=16ODYZSJZGKX5&dib=eyJ2IjoiMSJ9.zaxJ2LD6OlFVAiEB01koG9ZaeJ8t3c3qbzwwuyuTkkxM4AjnlUSBODJrd_uuvtzQvupoB54jUKIKlcHJ4Jhc912yBqODU3v0dkr_HGgbCOdE8E5ykeyOhudAqjutWUQsboeLVSg6jl2boLfwvkdudRTViWXIGKN9PThOMLFx7QMrSHmA3dZFeflpGTxBXMh80hRUT7uUc3-Asy8eqQnPyuG-18G4oaDcXPaZBP7ZqICgbK5U1ic-Lieb1Py01r8nBcnQp-VKf1p32CYyVyuvkXGqAQYMAG5BRKX6V6YOfns.uxg9UHSjmuQdckWtJ1gM-dfyxt2Sz-5ZzOy0ssADigU&dib_tag=se&keywords=lego+lamborghini&qid=1776418487&sprefix=lego+lam%2Caps%2C236&sr=8-25&ufe=app_do%3Aamzn1.fos.49fccda8-a887-4188-817b-b9a64bb30e43" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="Nissan Skyline GT-R (R34).jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">Nissan Skyline GT-R (R34)</span>
+                <span class="prix-cadeau">~110€</span>
+            </div>
+	</div>
+    </a>
+
+    <a href="https://www.amazon.fr/LEGO-Technic-Supercar-Lamborghini-Revuelto/dp/B0DWDTRG1P/ref=sr_1_10?crid=16ODYZSJZGKX5&dib=eyJ2IjoiMSJ9.zaxJ2LD6OlFVAiEB01koG9ZaeJ8t3c3qbzwwuyuTkkxM4AjnlUSBODJrd_uuvtzQvupoB54jUKIKlcHJ4Jhc912yBqODU3v0dkr_HGgbCOdE8E5ykeyOhudAqjutWUQsboeLVSg6jl2boLfwvkdudRTViWXIGKN9PThOMLFx7QMrSHmA3dZFeflpGTxBXMh80hRUT7uUc3-Asy8eqQnPyuG-18G4oaDcXPaZBP7ZqICgbK5U1ic-Lieb1Py01r8nBcnQp-VKf1p32CYyVyuvkXGqAQYMAG5BRKX6V6YOfns.uxg9UHSjmuQdckWtJ1gM-dfyxt2Sz-5ZzOy0ssADigU&dib_tag=se&keywords=lego+lamborghini&qid=1776418487&sprefix=lego+lam%2Caps%2C236&sr=8-10&ufe=app_do%3Aamzn1.fos.49fccda8-a887-4188-817b-b9a64bb30e43" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="Lamborghini Revuelto.jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">Lamborghini Revuelto</span>
+                <span class="prix-cadeau">~135€</span>
+            </div>
+	</div>
+    </a>
+
+    <a href="https://www.amazon.fr/LEGO-Technic-Voiture-Course-BMW/dp/B0FPXFKGQR/ref=sr_1_26?crid=16ODYZSJZGKX5&dib=eyJ2IjoiMSJ9.zaxJ2LD6OlFVAiEB01koG9ZaeJ8t3c3qbzwwuyuTkkxM4AjnlUSBODJrd_uuvtzQvupoB54jUKIKlcHJ4Jhc912yBqODU3v0dkr_HGgbCOdE8E5ykeyOhudAqjutWUQsboeLVSg6jl2boLfwvkdudRTViWXIGKN9PThOMLFx7QMrSHmA3dZFeflpGTxBXMh80hRUT7uUc3-Asy8eqQnPyuG-18G4oaDcXPaZBP7ZqICgbK5U1ic-Lieb1Py01r8nBcnQp-VKf1p32CYyVyuvkXGqAQYMAG5BRKX6V6YOfns.uxg9UHSjmuQdckWtJ1gM-dfyxt2Sz-5ZzOy0ssADigU&dib_tag=se&keywords=lego+lamborghini&qid=1776418487&sprefix=lego+lam%2Caps%2C236&sr=8-26" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="BMW M4 GT3 Evo.jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">BMW M4 GT3 Evo</span>
+                <span class="prix-cadeau">~60€</span>
+            </div>
+	</div>
+    </a>
+
+    <a href="https://www.amazon.fr/LEGO-Champions-Voiture-Ferrari-Stradale/dp/B0FPXK52K8/ref=sr_1_15?crid=16ODYZSJZGKX5&dib=eyJ2IjoiMSJ9.zaxJ2LD6OlFVAiEB01koG9ZaeJ8t3c3qbzwwuyuTkkxM4AjnlUSBODJrd_uuvtzQvupoB54jUKIKlcHJ4Jhc912yBqODU3v0dkr_HGgbCOdE8E5ykeyOhudAqjutWUQsboeLVSg6jl2boLfwvkdudRTViWXIGKN9PThOMLFx7QMrSHmA3dZFeflpGTxBXMh80hRUT7uUc3-Asy8eqQnPyuG-18G4oaDcXPaZBP7ZqICgbK5U1ic-Lieb1Py01r8nBcnQp-VKf1p32CYyVyuvkXGqAQYMAG5BRKX6V6YOfns.uxg9UHSjmuQdckWtJ1gM-dfyxt2Sz-5ZzOy0ssADigU&dib_tag=se&keywords=lego+lamborghini&qid=1776418487&sprefix=lego+lam%2Caps%2C236&sr=8-15" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="Ferrari SF90 XX Stradale.jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">Ferrari SF90 XX Stradale</span>
+                <span class="prix-cadeau">~25€</span>
+            </div>
+	</div>
+    </a>
+
+    <a href="https://www.amazon.fr/LEGO-Speed-Champions-Voiture-Ferrari/dp/B0DHSBBV6R/ref=sr_1_16?crid=16ODYZSJZGKX5&dib=eyJ2IjoiMSJ9.zaxJ2LD6OlFVAiEB01koG9ZaeJ8t3c3qbzwwuyuTkkxM4AjnlUSBODJrd_uuvtzQvupoB54jUKIKlcHJ4Jhc912yBqODU3v0dkr_HGgbCOdE8E5ykeyOhudAqjutWUQsboeLVSg6jl2boLfwvkdudRTViWXIGKN9PThOMLFx7QMrSHmA3dZFeflpGTxBXMh80hRUT7uUc3-Asy8eqQnPyuG-18G4oaDcXPaZBP7ZqICgbK5U1ic-Lieb1Py01r8nBcnQp-VKf1p32CYyVyuvkXGqAQYMAG5BRKX6V6YOfns.uxg9UHSjmuQdckWtJ1gM-dfyxt2Sz-5ZzOy0ssADigU&dib_tag=se&keywords=lego%2Blamborghini&qid=1776418487&sprefix=lego%2Blam%2Caps%2C236&sr=8-16&th=1" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="F1 Ferrari SF-24 (petite).jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">F1 Ferrari SF-24 (petite)</span>
+                <span class="prix-cadeau">~20€</span>
+            </div>
+	</div>
+    </a>
+
+    <a href="https://www.amazon.fr/LEGO-Technic-Ferrari-SF-24-Adolescent/dp/B0DHSCYDL2/ref=sr_1_31?crid=16ODYZSJZGKX5&dib=eyJ2IjoiMSJ9.zaxJ2LD6OlFVAiEB01koG9ZaeJ8t3c3qbzwwuyuTkkxM4AjnlUSBODJrd_uuvtzQvupoB54jUKIKlcHJ4Jhc912yBqODU3v0dkr_HGgbCOdE8E5ykeyOhudAqjutWUQsboeLVSg6jl2boLfwvkdudRTViWXIGKN9PThOMLFx7QMrSHmA3dZFeflpGTxBXMh80hRUT7uUc3-Asy8eqQnPyuG-18G4oaDcXPaZBP7ZqICgbK5U1ic-Lieb1Py01r8nBcnQp-VKf1p32CYyVyuvkXGqAQYMAG5BRKX6V6YOfns.uxg9UHSjmuQdckWtJ1gM-dfyxt2Sz-5ZzOy0ssADigU&dib_tag=se&keywords=lego%2Blamborghini&qid=1776418487&sprefix=lego%2Blam%2Caps%2C236&sr=8-31&ufe=app_do%3Aamzn1.fos.49fccda8-a887-4188-817b-b9a64bb30e43&th=1" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="F1 Ferrari SF-24.jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">F1 Ferrari SF-24</span>
+                <span class="prix-cadeau">~160€</span>
+            </div>
+	</div>
+    </a>
+
+    <a href="https://www.amazon.fr/LEGO-Speed-Champions-Voiture-Mercedes-AMG/dp/B0DHS9Y433/ref=sr_1_37?crid=16ODYZSJZGKX5&dib=eyJ2IjoiMSJ9.zaxJ2LD6OlFVAiEB01koG9ZaeJ8t3c3qbzwwuyuTkkxM4AjnlUSBODJrd_uuvtzQvupoB54jUKIKlcHJ4Jhc912yBqODU3v0dkr_HGgbCOdE8E5ykeyOhudAqjutWUQsboeLVSg6jl2boLfwvkdudRTViWXIGKN9PThOMLFx7QMrSHmA3dZFeflpGTxBXMh80hRUT7uUc3-Asy8eqQnPyuG-18G4oaDcXPaZBP7ZqICgbK5U1ic-Lieb1Py01r8nBcnQp-VKf1p32CYyVyuvkXGqAQYMAG5BRKX6V6YOfns.uxg9UHSjmuQdckWtJ1gM-dfyxt2Sz-5ZzOy0ssADigU&dib_tag=se&keywords=lego%2Blamborghini&qid=1776418487&sprefix=lego%2Blam%2Caps%2C236&sr=8-37&th=1" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="F1 Mercedes-AMG W15 (petite).jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">F1 Mercedes-AMG W15 (petite)</span>
+                <span class="prix-cadeau">~20€</span>
+            </div>
+	</div>
+    </a>
+
+    <a href="https://www.amazon.fr/LEGO-Speed-Champions-Flash-McQueen/dp/B0FPXCYXHM/ref=sr_1_45?crid=16ODYZSJZGKX5&dib=eyJ2IjoiMSJ9.zaxJ2LD6OlFVAiEB01koG9ZaeJ8t3c3qbzwwuyuTkkxM4AjnlUSBODJrd_uuvtzQvupoB54jUKIKlcHJ4Jhc912yBqODU3v0dkr_HGgbCOdE8E5ykeyOhudAqjutWUQsboeLVSg6jl2boLfwvkdudRTViWXIGKN9PThOMLFx7QMrSHmA3dZFeflpGTxBXMh80hRUT7uUc3-Asy8eqQnPyuG-18G4oaDcXPaZBP7ZqICgbK5U1ic-Lieb1Py01r8nBcnQp-VKf1p32CYyVyuvkXGqAQYMAG5BRKX6V6YOfns.uxg9UHSjmuQdckWtJ1gM-dfyxt2Sz-5ZzOy0ssADigU&dib_tag=se&keywords=lego+lamborghini&qid=1776418487&sprefix=lego+lam%2Caps%2C236&sr=8-45" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="Flash McQueen.jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">Flash McQueen</span>
+                <span class="prix-cadeau">~22€</span>
+            </div>
+	</div>
+    </a>
+
+    <a href="https://www.amazon.fr/LEGO-Technic-Voiture-Porsche-Racing/dp/B0FPXFZXC2/ref=sr_1_47?crid=16ODYZSJZGKX5&dib=eyJ2IjoiMSJ9.zaxJ2LD6OlFVAiEB01koG9ZaeJ8t3c3qbzwwuyuTkkxM4AjnlUSBODJrd_uuvtzQvupoB54jUKIKlcHJ4Jhc912yBqODU3v0dkr_HGgbCOdE8E5ykeyOhudAqjutWUQsboeLVSg6jl2boLfwvkdudRTViWXIGKN9PThOMLFx7QMrSHmA3dZFeflpGTxBXMh80hRUT7uUc3-Asy8eqQnPyuG-18G4oaDcXPaZBP7ZqICgbK5U1ic-Lieb1Py01r8nBcnQp-VKf1p32CYyVyuvkXGqAQYMAG5BRKX6V6YOfns.uxg9UHSjmuQdckWtJ1gM-dfyxt2Sz-5ZzOy0ssADigU&dib_tag=se&keywords=lego+lamborghini&qid=1776418487&sprefix=lego+lam%2Caps%2C236&sr=8-47&ufe=app_do%3Aamzn1.fos.49fccda8-a887-4188-817b-b9a64bb30e43" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="Porsche 911 GT3 R.jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">Porsche 911 GT3 R</span>
+                <span class="prix-cadeau">~120€</span>
+            </div>
+	</div>
+    </a>
+
+    <a href="https://www.amazon.fr/LEGO-Technic-Voiture-Course-1966/dp/B0FPXDNT2N/ref=sr_1_51?crid=16ODYZSJZGKX5&dib=eyJ2IjoiMSJ9.zaxJ2LD6OlFVAiEB01koG9ZaeJ8t3c3qbzwwuyuTkkxM4AjnlUSBODJrd_uuvtzQvupoB54jUKIKlcHJ4Jhc912yBqODU3v0dkr_HGgbCOdE8E5ykeyOhudAqjutWUQsboeLVSg6jl2boLfwvkdudRTViWXIGKN9PThOMLFx7QMrSHmA3dZFeflpGTxBXMh80hRUT7uUc3-Asy8eqQnPyuG-18G4oaDcXPaZBP7ZqICgbK5U1ic-Lieb1Py01r8nBcnQp-VKf1p32CYyVyuvkXGqAQYMAG5BRKX6V6YOfns.uxg9UHSjmuQdckWtJ1gM-dfyxt2Sz-5ZzOy0ssADigU&dib_tag=se&keywords=lego+lamborghini&qid=1776418487&sprefix=lego+lam%2Caps%2C236&sr=8-51" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="1966 Ford GT40 MKII.jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">1966 Ford GT40 MKII</span>
+                <span class="prix-cadeau">~60€</span>
+            </div>
+	</div>
+    </a>
+
+    <a href="https://www.amazon.fr/LEGO-Technic-McLaren-Passionn%C3%A9s-V%C3%A9hicules/dp/B0CWH3TBGB/ref=sr_1_53?crid=16ODYZSJZGKX5&dib=eyJ2IjoiMSJ9.zaxJ2LD6OlFVAiEB01koG9ZaeJ8t3c3qbzwwuyuTkkxM4AjnlUSBODJrd_uuvtzQvupoB54jUKIKlcHJ4Jhc912yBqODU3v0dkr_HGgbCOdE8E5ykeyOhudAqjutWUQsboeLVSg6jl2boLfwvkdudRTViWXIGKN9PThOMLFx7QMrSHmA3dZFeflpGTxBXMh80hRUT7uUc3-Asy8eqQnPyuG-18G4oaDcXPaZBP7ZqICgbK5U1ic-Lieb1Py01r8nBcnQp-VKf1p32CYyVyuvkXGqAQYMAG5BRKX6V6YOfns.uxg9UHSjmuQdckWtJ1gM-dfyxt2Sz-5ZzOy0ssADigU&dib_tag=se&keywords=lego+lamborghini&qid=1776418487&sprefix=lego+lam%2Caps%2C236&sr=8-53&ufe=app_do%3Aamzn1.fos.49fccda8-a887-4188-817b-b9a64bb30e43" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="McLaren P1.jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">McLaren P1</span>
+                <span class="prix-cadeau">~320€</span>
+            </div>
+	</div>
+    </a>
+
+    <a href="https://www.amazon.fr/Mercedes-AMG-Performance-R%C3%A9trofriction-danniversaire-42165/dp/B0CFVYZRN1/ref=sr_1_53?crid=16ODYZSJZGKX5&dib=eyJ2IjoiMSJ9.a4oY4dG4QLuRBHSM16hx1Is4F39R0tzGv22ruBqNCP1YKpM2ObDkI9J-125ef0yB8UqzO0Lv_tkYZxQK6m_2MiqfK1Dsoe8pXSyL6rS65f_9D_ItBRtej6Eqg7mOhkI_vVGQXZ1Ddcwyxb1lbJcTE7hpS5yK5KHwPYt0KC2urPmFIFj8Upnueo3UBg1BY3-VH-siQaF3dfcuYPjErCN3qEMVfG0Lj9odWHt-chvpPXPROkZGGi9a8fQhTr1srab3iDiMaFAmGa7eDxry8pxYpniqYQDr6INBH4gvF6LsuOs.XnrQIZb9CErkqEKFedW6mW5Bypf4HRAWv-uf2pwGrAQ&dib_tag=se&keywords=lego%2Blamborghini&qid=1776418632&sprefix=lego%2Blam%2Caps%2C236&sr=8-53&xpid=oLmoMz934r6LT&th=1" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="Mercedes-AMG F1 W14.jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">Mercedes-AMG F1 W14</span>
+                <span class="prix-cadeau">~40€</span>
+            </div>
+	</div>
+    </a>
+
+    <a href="https://www.amazon.fr/LEGO-Technic-Oracle-Bull-Racing/dp/B0DHSCHP9P/ref=sr_1_52?crid=16ODYZSJZGKX5&dib=eyJ2IjoiMSJ9.a4oY4dG4QLuRBHSM16hx1Is4F39R0tzGv22ruBqNCP1YKpM2ObDkI9J-125ef0yB8UqzO0Lv_tkYZxQK6m_2MiqfK1Dsoe8pXSyL6rS65f_9D_ItBRtej6Eqg7mOhkI_vVGQXZ1Ddcwyxb1lbJcTE7hpS5yK5KHwPYt0KC2urPmFIFj8Upnueo3UBg1BY3-VH-siQaF3dfcuYPjErCN3qEMVfG0Lj9odWHt-chvpPXPROkZGGi9a8fQhTr1srab3iDiMaFAmGa7eDxry8pxYpniqYQDr6INBH4gvF6LsuOs.XnrQIZb9CErkqEKFedW6mW5Bypf4HRAWv-uf2pwGrAQ&dib_tag=se&keywords=lego%2Blamborghini&qid=1776418632&sprefix=lego%2Blam%2Caps%2C236&sr=8-52&ufe=app_do%3Aamzn1.fos.49fccda8-a887-4188-817b-b9a64bb30e43&xpid=oLmoMz934r6LT&th=1" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="F1 Oracle Red Bull Racing RB20.jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">F1 Oracle Red Bull Racing RB20</span>
+                <span class="prix-cadeau">~160€</span>
+            </div>
+	</div>
+    </a>
+
+    <a href="https://www.amazon.fr/LEGO-Super-Mario-Game-Boy/dp/B0DWDGVHM6/ref=sr_1_41?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1TZORGBBQ1IE8&dib=eyJ2IjoiMSJ9.dUgShE9jHUXe567xAH1tdYLDrmX2NeugXZTHVAB1bT3_gqXUKtnLqr5DDPaCWWLPGmYzK7FKaDzViFYGJcMtOrSA7CHgYuhMyT-9yeOEnwYsgeD9veBB4wxIEPbg4KY0DzvOrTwKetfUuzJkFyaVgUiRUsy1suxNRx-hOHsud_BYvu5zRv7uZWiTauhBCHgoPSMtWHXD_moySYXwK_PFLHji8_LBtE51lowURLVmUWb1Mj1g4-5Cnb_yp9SDpUKTRGM2zsMX0TmjCs-Jl4k82xjKLZuFRhTa-awFGGTg9dY.Sy_y032f9pSn04hz6pR8u9lb7mnzQCIxzVGylv6MD7k&dib_tag=se&keywords=lego+technic&qid=1776418701&sprefix=lego+techniqu%2Caps%2C244&sr=8-41" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="Super Mario Game Boy.jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">Super Mario Game Boy</span>
+                <span class="prix-cadeau">~50€</span>
+            </div>
+	</div>
+    </a>
+
+    <a href="https://www.amazon.fr/LEGO-Speed-Champions-Voiture-McLaren/dp/B0DHS9Y192/ref=sr_1_3?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1EFD493KDA92P&dib=eyJ2IjoiMSJ9.sjzGXwT9dn7GovPLEEBJpuFV9mw5BP03I6Rokc_QDPUN6Zl6_hOm0WMvydRpwd8IiajbaySNawYEwJoATgrWlO0r0TOsUn9LPqXrbAEBYa0VyDCuLRFhmvZ1NE3ktk5_alsYe76zDHl6G7YT1wCqFAWjEokdxVYb3uKI65qrLnDD0hqcleVxyWmRTbO5Fo1rR9_Qlf62RgqikyHW4zKRY1HQ-E7q1r81M5BBJPPJnhFXcu90mI9PxNKSoFtjS9Eo0tePgOM3o5ZHzLO4p7IeJrfcGFRNhs00NjV_So8tktY.24ltAPPOVt0xmRHZUP0zPnT9FTRWqMr8kOtpM4inn1g&dib_tag=se&keywords=lego%2Bf1&qid=1776418747&sprefix=lego%2Bf1%2Caps%2C242&sr=8-3&th=1" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="F1 McLaren Team MCL38.jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">F1 McLaren Team MCL38</span>
+                <span class="prix-cadeau">~20€</span>
+            </div>
+	</div>
+    </a>
+
+    <a href="https://www.amazon.fr/Mercedes-AMG-Performance-D%C3%A9taill%C3%A9e-D%C3%A9coration-42171/dp/B0CFVZ74KT/ref=sr_1_24?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1EFD493KDA92P&dib=eyJ2IjoiMSJ9.sjzGXwT9dn7GovPLEEBJpuFV9mw5BP03I6Rokc_QDPUN6Zl6_hOm0WMvydRpwd8IiajbaySNawYEwJoATgrWlO0r0TOsUn9LPqXrbAEBYa0VyDCuLRFhmvZ1NE3ktk5_alsYe76zDHl6G7YT1wCqFAWjEokdxVYb3uKI65qrLnDD0hqcleVxyWmRTbO5Fo1rR9_Qlf62RgqikyHW4zKRY1HQ-E7q1r81M5BBJPPJnhFXcu90mI9PxNKSoFtjS9Eo0tePgOM3o5ZHzLO4p7IeJrfcGFRNhs00NjV_So8tktY.24ltAPPOVt0xmRHZUP0zPnT9FTRWqMr8kOtpM4inn1g&dib_tag=se&keywords=lego%2Bf1&qid=1776418747&sprefix=lego%2Bf1%2Caps%2C242&sr=8-24&th=1" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="Mercedes-AMG F1 W14 (grande).jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">Mercedes-AMG F1 W14 (grande)</span>
+                <span class="prix-cadeau">~210€</span>
+            </div>
+	</div>
+    </a>
+
+    <a href="https://www.amazon.fr/LEGO-Speed-Champions-McLaren-danniversaire/dp/B0FPXDQM2S/ref=sr_1_11?crid=2TZA8DTI69Q01&dib=eyJ2IjoiMSJ9.Pjmx4_WpumfpB7sqDZ3Srg2ED0mjNQK8qUbNCY6rOC-3N42wc1FzOlfARsPJDMQn9uYEiLjXSrfqgUvi9hoF-wtfrSEp8h9NDKN8lxtevpQIBhwHv14ByRtu7EQLAYCYyFfFWndxbsFAXVF6jJT97JQ75Ge7QIgXLK0Xw0xPSGSOfAmCiZfuUhOl2xpDzDwFZHwBjASiroYXuFPSpZF-AcIo8yewlWiyuft2aOZ3Q84512y1n8GpbtpoCJnwLkieicMhhUaw_M5DbxMUtu5nyvOzGs5h7LmAi8wF1vrgzoU.ltVorijHG1ZXWLrjJCv12Nf6gwKEOqQCUeFOkfwdNJU&dib_tag=se&keywords=lego+speed+champion&qid=1776418775&sprefix=lego+speed%2Caps%2C246&sr=8-11" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="McLaren W1.jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">McLaren W1</span>
+                <span class="prix-cadeau">~25€</span>
+            </div>
+	</div>
+    </a>
+
+    <a href="https://www.amazon.fr/LEGO-TBD-SC-4-2024/dp/B0CFVXTCWC/ref=sr_1_27?crid=2TZA8DTI69Q01&dib=eyJ2IjoiMSJ9.Pjmx4_WpumfpB7sqDZ3Srg2ED0mjNQK8qUbNCY6rOC-3N42wc1FzOlfARsPJDMQn9uYEiLjXSrfqgUvi9hoF-wtfrSEp8h9NDKN8lxtevpQIBhwHv14ByRtu7EQLAYCYyFfFWndxbsFAXVF6jJT97JQ75Ge7QIgXLK0Xw0xPSGSOfAmCiZfuUhOl2xpDzDwFZHwBjASiroYXuFPSpZF-AcIo8yewlWiyuft2aOZ3Q84512y1n8GpbtpoCJnwLkieicMhhUaw_M5DbxMUtu5nyvOzGs5h7LmAi8wF1vrgzoU.ltVorijHG1ZXWLrjJCv12Nf6gwKEOqQCUeFOkfwdNJU&dib_tag=se&keywords=lego%2Bspeed%2Bchampion&qid=1776418775&sprefix=lego%2Bspeed%2Caps%2C246&sr=8-27&th=1" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="cadeau-card">
+            <img src="BMW M4 GT3 et BMW M Hybrid V8.jpg" class="cadeau-image">
+            
+            <div class="cadeau-infos">
+                <span class="nom-cadeau">BMW M4 GT3 et BMW M Hybrid V8</span>
+                <span class="prix-cadeau">~65€</span>
+            </div>
+	</div>
+    </a>
+
+     </main>
+    
+    
+    
+     <a href="categories.html">← Retour au categories</a>
+     <br>
+     <br>
+     <a href="index.html">← Retour à l'accueil</a>
+</body>
+</html>
